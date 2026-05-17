@@ -32,39 +32,23 @@
 
     <!-- Hero -->
     <header class="hero">
-        <div class="container text-center">
+        <div class="container text-center hero-content" id="hero-content">
             <div class="hero-badge">
                 <span class="dot"></span>
                 אפליקציות מובייל ישראליות
             </div>
             <h1><span class="text-gradient">nakache</span>.app</h1>
             <p id="typewriter"></p>
-            <div class="hero-scroll-indicator">
+            <div class="hero-scroll-indicator" id="hero-scroll-indicator">
                 <div class="scroll-line"></div>
                 <span>גלול למטה</span>
             </div>
         </div>
     </header>
 
-    <!-- Stats -->
-    <div class="stats-row container">
-        <div class="stat-item">
-            <span class="stat-number" data-target="2">0</span>
-            <div class="stat-label">אפליקציות</div>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number" data-target="1000">0</span>
-            <div class="stat-label">משתמשים</div>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number" data-target="5">0</span>
-            <div class="stat-label">⭐ דירוג</div>
-        </div>
-    </div>
-
     <!-- Apps -->
     <main class="apps-section container" id="apps">
-        <div class="text-center">
+        <div class="text-center scroll-animate">
             <h2 class="section-title">האפליקציות שלי</h2>
             <p class="section-subtitle">חוויות דיגיטליות חכמות שנבנו עם תשומת לב לכל פרט</p>
         </div>
@@ -127,7 +111,7 @@
 
     <footer>
         <div class="container">
-            <div class="footer-inner">
+            <div class="footer-inner scroll-animate">
                 <div class="footer-logo">nakache<span>.app</span></div>
                 <div class="footer-links">
                     <a href="#apps">אפליקציות</a>
@@ -172,24 +156,35 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.app-card').forEach(c => observer.observe(c));
 
-    // ── Animated stat counters ─────────────────────────────────
-    const statObs = new IntersectionObserver((entries) => {
+    // ── Scroll reveal elements ─────────────────────────────────
+    const scrollObserver = new IntersectionObserver((entries) => {
         entries.forEach(e => {
-            if (!e.isIntersecting) return;
-            const el = e.target;
-            const target = +el.dataset.target;
-            const duration = 1400;
-            const step = Math.ceil(target / (duration / 16));
-            let current = 0;
-            const timer = setInterval(() => {
-                current = Math.min(current + step, target);
-                el.textContent = current.toLocaleString('he-IL');
-                if (current >= target) clearInterval(timer);
-            }, 16);
-            statObs.unobserve(el);
+            if (e.isIntersecting) e.target.classList.add('in-view');
         });
-    }, { threshold: 0.5 });
-    document.querySelectorAll('.stat-number').forEach(el => statObs.observe(el));
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.scroll-animate').forEach(el => scrollObserver.observe(el));
+
+    // ── Scroll-driven hero motion ──────────────────────────────
+    const heroContent = document.getElementById('hero-content');
+    const scrollLine = document.getElementById('hero-scroll-indicator');
+    const SCROLL_CONFIG = {
+        hero: { speed: 0.22, maxOffset: 140, minOpacity: 0.25, opacityRange: 650 },
+        indicator: { speed: 0.35, maxOffset: 120, opacityRange: 260 }
+    };
+    function handleScrollMotion() {
+        const y = window.scrollY;
+        const heroOffset = Math.min(y * SCROLL_CONFIG.hero.speed, SCROLL_CONFIG.hero.maxOffset);
+        const heroOpacity = Math.max(SCROLL_CONFIG.hero.minOpacity, 1 - y / SCROLL_CONFIG.hero.opacityRange);
+        heroContent.style.transform = `translate3d(0, ${heroOffset}px, 0)`;
+        heroContent.style.opacity = heroOpacity;
+        if (scrollLine) {
+            const lineOffset = Math.min(y * SCROLL_CONFIG.indicator.speed, SCROLL_CONFIG.indicator.maxOffset);
+            scrollLine.style.transform = `translate3d(0, ${lineOffset}px, 0)`;
+            scrollLine.style.opacity = Math.max(0, 1 - y / SCROLL_CONFIG.indicator.opacityRange);
+        }
+    }
+    window.addEventListener('scroll', handleScrollMotion, { passive: true });
+    handleScrollMotion();
 
     // ── 3-D tilt on cards ─────────────────────────────────────
     document.querySelectorAll('.app-card').forEach(card => {
