@@ -167,23 +167,20 @@
     // ── Scroll-driven hero motion ──────────────────────────────
     const heroContent = document.getElementById('hero-content');
     const scrollLine = document.getElementById('hero-scroll-indicator');
-    const HERO_SCROLL_SPEED = 0.22;
-    const HERO_MAX_OFFSET = 140;
-    const HERO_MIN_OPACITY = 0.25;
-    const HERO_OPACITY_RANGE = 650;
-    const INDICATOR_SCROLL_SPEED = 0.35;
-    const INDICATOR_MAX_OFFSET = 120;
-    const INDICATOR_OPACITY_RANGE = 260;
+    const SCROLL_CONFIG = {
+        hero: { speed: 0.22, maxOffset: 140, minOpacity: 0.25, opacityRange: 650 },
+        indicator: { speed: 0.35, maxOffset: 120, opacityRange: 260 }
+    };
     function handleScrollMotion() {
         const y = window.scrollY;
-        const heroOffset = Math.min(y * HERO_SCROLL_SPEED, HERO_MAX_OFFSET);
-        const heroOpacity = Math.max(HERO_MIN_OPACITY, 1 - y / HERO_OPACITY_RANGE);
+        const heroOffset = Math.min(y * SCROLL_CONFIG.hero.speed, SCROLL_CONFIG.hero.maxOffset);
+        const heroOpacity = Math.max(SCROLL_CONFIG.hero.minOpacity, 1 - y / SCROLL_CONFIG.hero.opacityRange);
         heroContent.style.transform = `translate3d(0, ${heroOffset}px, 0)`;
         heroContent.style.opacity = heroOpacity;
         if (scrollLine) {
-            const lineOffset = Math.min(y * INDICATOR_SCROLL_SPEED, INDICATOR_MAX_OFFSET);
+            const lineOffset = Math.min(y * SCROLL_CONFIG.indicator.speed, SCROLL_CONFIG.indicator.maxOffset);
             scrollLine.style.transform = `translate3d(0, ${lineOffset}px, 0)`;
-            scrollLine.style.opacity = Math.max(0, 1 - y / INDICATOR_OPACITY_RANGE);
+            scrollLine.style.opacity = Math.max(0, 1 - y / SCROLL_CONFIG.indicator.opacityRange);
         }
     }
     window.addEventListener('scroll', handleScrollMotion, { passive: true });

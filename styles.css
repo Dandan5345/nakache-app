@@ -193,10 +193,6 @@ body::before {
     margin-bottom: 20px;
 }
 
-.hero-content {
-    will-change: transform, opacity;
-}
-
 .hero-badge {
     display: inline-flex;
     align-items: center;
