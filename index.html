@@ -11,85 +11,117 @@
 </head>
 
 <body>
-    <!-- רקע -->
     <canvas id="particle-canvas"></canvas>
-    <div class="bg-blobs">
+    <div class="bg-blobs" aria-hidden="true">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
         <div class="blob blob-3"></div>
     </div>
 
-    <!-- ניווט -->
     <nav class="navbar" id="navbar">
         <div class="container navbar-content">
             <div class="logo">nakache<span>.app</span></div>
             <div class="nav-links">
                 <a href="#apps">אפליקציות</a>
+                <a href="terms-tripease.html">מסמכים משפטיים</a>
                 <a href="mailto:doronenakache@gmail.com">צור קשר</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
     <header class="hero">
         <div class="container text-center hero-content" id="hero-content">
+            <div class="hero-decor hero-orb-left"></div>
+            <div class="hero-decor hero-orb-right"></div>
+            <div class="hero-decor hero-ring"></div>
+
             <div class="hero-badge">
                 <span class="dot"></span>
-                אפליקציות מובייל ישראליות
+                חוויית מוצר בהירה, חלקה ומודרנית
             </div>
-            <h1><span class="text-gradient">nakache</span>.app</h1>
+
+            <h1><span>nakache</span>.app</h1>
             <p id="typewriter"></p>
+
+            <div class="hero-actions">
+                <a href="#apps" class="btn primary-btn">
+                    <i class="fa-solid fa-sparkles"></i>
+                    גלה את האפליקציות
+                </a>
+                <a href="terms-tripease.html" class="btn ghost-btn">
+                    <i class="fa-regular fa-file-lines"></i>
+                    למסמכים המשפטיים
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <strong>2</strong>
+                    <span>מוצרים עם שפה חזותית אחידה ובהירה</span>
+                </div>
+                <div class="hero-stat">
+                    <strong>5</strong>
+                    <span>עמודים משפטיים בעיצוב זכוכית מודרני ונעים</span>
+                </div>
+                <div class="hero-stat">
+                    <strong>∞</strong>
+                    <span>מעברים חלקים, עומק עדין ואנימציות זורמות</span>
+                </div>
+            </div>
+
             <div class="hero-scroll-indicator" id="hero-scroll-indicator">
                 <div class="scroll-line"></div>
-                <span>גלול למטה</span>
+                <span>גללו למטה לחוויה מלאה</span>
             </div>
         </div>
     </header>
 
-    <!-- Apps -->
     <main class="apps-section container" id="apps">
         <div class="text-center scroll-animate">
+            <div class="section-chip">
+                <span class="dot"></span>
+                אפליקציות בעיצוב חדש
+            </div>
             <h2 class="section-title">האפליקציות שלי</h2>
-            <p class="section-subtitle">חוויות דיגיטליות חכמות שנבנו עם תשומת לב לכל פרט</p>
+            <p class="section-subtitle">ממשק בהיר עם שכבות עדינות, כרטיסים נקיים ותנועה רכה שמרגישה כמו דף מודרני אמיתי.</p>
         </div>
-        <section class="apps-grid">
 
-            <!-- CashFlowM -->
-            <div class="app-card">
+        <section class="apps-grid">
+            <article class="app-card">
                 <div class="app-image-container">
                     <span class="app-badge">זמין עכשיו</span>
                     <img class="app-image" src="cashflowm.jpeg" alt="CashFlowM App">
                 </div>
                 <div class="app-content">
                     <h2>CashFlowM</h2>
-                    <p>האפליקציה המושלמת לניהול הוצאות והכנסות ומעקב אחרי שוק ההון. מאפשרת לעקוב אחרי חסכונות ולשתף מעקבי הוצאות וחסכונות בקלות עם חברים ומשפחה.</p>
+                    <p>האפליקציה המושלמת לניהול הוצאות והכנסות ומעקב אחרי שוק ההון, עם חוויה נקייה, רכה ומאורגנת שמבליטה את המידע החשוב באמת.</p>
                     <div class="feature-tags">
                         <span class="tag">💰 ניהול תקציב</span>
                         <span class="tag">📈 שוק ההון</span>
-                        <span class="tag">👥 שיתוף</span>
+                        <span class="tag">�� שיתוף משפחתי</span>
                     </div>
                     <div class="app-links">
-                        <a href="https://apps.apple.com/il/app/cashflowm/id6760549070?l=he" target="_blank"
-                            class="btn primary-btn">
-                            <i class="fa-brands fa-apple"></i> הורד עכשיו
+                        <a href="https://apps.apple.com/il/app/cashflowm/id6760549070?l=he" target="_blank" rel="noreferrer" class="btn primary-btn">
+                            <i class="fa-brands fa-apple"></i>
+                            הורד עכשיו
                         </a>
                         <div class="legal-links">
-                            <a href="terms-cashflowm.html">תנאי שימוש</a> |
+                            <a href="terms-cashflowm.html">תנאי שימוש</a>
+                            <span>•</span>
                             <a href="privacy-cashflowm.html">מדיניות פרטיות</a>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <!-- TripEase -->
-            <div class="app-card">
+            <article class="app-card">
                 <div class="app-image-container tripease-bg">
                     <span class="app-badge soon">בקרוב</span>
                     <img class="app-image" src="tripease.png" alt="TripEase App">
                 </div>
                 <div class="app-content">
                     <h2>TripEase</h2>
-                    <p>אפליקציה לניהול ויצירת טיולים – הכל במקום אחד. כל הטיסות, המלונות, הלו"ז היומי ואפילו דרכונים ואישורי הזמנות. מסודר ומוכן לשיתוף עם חברים או משפחה לטיול מושלם.</p>
+                    <p>מרכז טיולים חכם, נעים ומודרני לניהול טיסות, מלונות, מסמכים, לו"ז יומי ושיתופים — הכל במקום אחד, בעיצוב רגוע ובהיר.</p>
                     <div class="feature-tags">
                         <span class="tag">✈️ טיסות</span>
                         <span class="tag">🏨 מלונות</span>
@@ -98,14 +130,15 @@
                     <div class="app-links">
                         <span class="btn secondary-btn disabled">בקרוב...</span>
                         <div class="legal-links">
-                            <a href="terms-tripease.html">תנאי שימוש</a> |
-                            <a href="privacy-tripease.html">מדיניות פרטיות</a> |
+                            <a href="terms-tripease.html">תנאי שימוש</a>
+                            <span>•</span>
+                            <a href="privacy-tripease.html">מדיניות פרטיות</a>
+                            <span>•</span>
                             <a href="disclosure-tripease.html">גילוי נאות</a>
                         </div>
                     </div>
                 </div>
-            </div>
-
+            </article>
         </section>
     </main>
 
@@ -115,6 +148,7 @@
                 <div class="footer-logo">nakache<span>.app</span></div>
                 <div class="footer-links">
                     <a href="#apps">אפליקציות</a>
+                    <a href="terms-tripease.html">מסמכים משפטיים</a>
                     <a href="mailto:doronenakache@gmail.com">צור קשר</a>
                 </div>
                 <p class="footer-copy">&copy; 2026 Nakache.app · כל הזכויות שמורות · פותח עם <span class="footer-heart">♥</span> על ידי דורון נקש</p>
@@ -123,123 +157,147 @@
     </footer>
 
     <script>
-    // ── Navbar scroll ──────────────────────────────────────────
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        navbar.classList.toggle('scrolled', window.scrollY > 40);
-    });
+    const heroContent = document.getElementById('hero-content');
+    const scrollIndicator = document.getElementById('hero-scroll-indicator');
 
-    // ── Typewriter ─────────────────────────────────────────────
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 28);
+    }, { passive: true });
+
     const phrases = [
-        'היישומים המדויקים ביותר לחיים דיגיטליים חכמים יותר',
-        'מנהל את הכסף שלך. מתכנן את הטיול שלך.',
-        'אפליקציות שנבנו עם אהבה לפרטים.',
+        'עיצוב בהיר, אלגנטי וחלק לכל דף באפליקציה.',
+        'חוויית שימוש מודרנית עם תנועה רכה ונקייה לעין.',
+        'אפליקציות שנבנו עם אהבה לפרטים, סדר ואסתטיקה.'
     ];
-    const tw = document.getElementById('typewriter');
-    let pi = 0, ci = 0, deleting = false;
+
+    const typewriter = document.getElementById('typewriter');
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
     function typeLoop() {
-        const phrase = phrases[pi];
-        if (!deleting) {
-            tw.textContent = phrase.slice(0, ++ci);
-            if (ci === phrase.length) { deleting = true; setTimeout(typeLoop, 2200); return; }
+        const currentPhrase = phrases[phraseIndex];
+        if (!isDeleting) {
+            typewriter.textContent = currentPhrase.slice(0, ++charIndex);
+            if (charIndex === currentPhrase.length) {
+                isDeleting = true;
+                setTimeout(typeLoop, 1800);
+                return;
+            }
         } else {
-            tw.textContent = phrase.slice(0, --ci);
-            if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; }
+            typewriter.textContent = currentPhrase.slice(0, --charIndex);
+            if (charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+            }
         }
-        setTimeout(typeLoop, deleting ? 35 : 60);
+        setTimeout(typeLoop, isDeleting ? 32 : 52);
     }
     typeLoop();
 
-    // ── Scroll reveal cards ────────────────────────────────────
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.app-card').forEach(c => observer.observe(c));
-
-    // ── Scroll reveal elements ─────────────────────────────────
-    const scrollObserver = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-            if (e.isIntersecting) e.target.classList.add('in-view');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                if (entry.target.classList.contains('app-card')) {
+                    entry.target.classList.add('revealed');
+                }
+            }
         });
-    }, { threshold: 0.2 });
-    document.querySelectorAll('.scroll-animate').forEach(el => scrollObserver.observe(el));
+    }, { threshold: 0.14 });
 
-    // ── Scroll-driven hero motion ──────────────────────────────
-    const heroContent = document.getElementById('hero-content');
-    const scrollLine = document.getElementById('hero-scroll-indicator');
+    document.querySelectorAll('.scroll-animate, .app-card').forEach((element) => {
+        revealObserver.observe(element);
+    });
+
     const SCROLL_CONFIG = {
-        hero: { speed: 0.22, maxOffset: 140, minOpacity: 0.25, opacityRange: 650 },
-        indicator: { speed: 0.35, maxOffset: 120, opacityRange: 260 }
+        hero: { speed: 0.16, maxOffset: 120, minOpacity: 0.32, opacityRange: 560 },
+        indicator: { speed: 0.28, maxOffset: 90, opacityRange: 220 }
     };
+
     function handleScrollMotion() {
         const y = window.scrollY;
         const heroOffset = Math.min(y * SCROLL_CONFIG.hero.speed, SCROLL_CONFIG.hero.maxOffset);
         const heroOpacity = Math.max(SCROLL_CONFIG.hero.minOpacity, 1 - y / SCROLL_CONFIG.hero.opacityRange);
         heroContent.style.transform = `translate3d(0, ${heroOffset}px, 0)`;
         heroContent.style.opacity = heroOpacity;
-        if (scrollLine) {
-            const lineOffset = Math.min(y * SCROLL_CONFIG.indicator.speed, SCROLL_CONFIG.indicator.maxOffset);
-            scrollLine.style.transform = `translate3d(0, ${lineOffset}px, 0)`;
-            scrollLine.style.opacity = Math.max(0, 1 - y / SCROLL_CONFIG.indicator.opacityRange);
+
+        if (scrollIndicator) {
+            const indicatorOffset = Math.min(y * SCROLL_CONFIG.indicator.speed, SCROLL_CONFIG.indicator.maxOffset);
+            scrollIndicator.style.transform = `translate3d(0, ${indicatorOffset}px, 0)`;
+            scrollIndicator.style.opacity = Math.max(0, 1 - y / SCROLL_CONFIG.indicator.opacityRange);
         }
     }
+
     window.addEventListener('scroll', handleScrollMotion, { passive: true });
     handleScrollMotion();
 
-    // ── 3-D tilt on cards ─────────────────────────────────────
-    document.querySelectorAll('.app-card').forEach(card => {
-        card.addEventListener('mousemove', e => {
-            const r = card.getBoundingClientRect();
-            const x = (e.clientX - r.left) / r.width  - 0.5;
-            const y = (e.clientY - r.top)  / r.height - 0.5;
-            card.style.transform = `translateY(-10px) perspective(900px) rotateY(${x * 6}deg) rotateX(${-y * 5}deg)`;
+    document.querySelectorAll('.app-card').forEach((card) => {
+        card.addEventListener('mousemove', (event) => {
+            const rect = card.getBoundingClientRect();
+            const x = (event.clientX - rect.left) / rect.width - 0.5;
+            const y = (event.clientY - rect.top) / rect.height - 0.5;
+            card.style.transform = `translateY(-12px) perspective(1100px) rotateY(${x * 6}deg) rotateX(${-y * 5}deg)`;
         });
+
         card.addEventListener('mouseleave', () => {
             card.style.transform = '';
         });
     });
 
-    // ── Particle canvas ────────────────────────────────────────
     const canvas = document.getElementById('particle-canvas');
-    const ctx = canvas.getContext('2d');
-    let W, H, particles = [];
+    const context = canvas.getContext('2d');
+    let width;
+    let height;
+    const particles = [];
 
-    function resize() {
-        W = canvas.width  = window.innerWidth;
-        H = canvas.height = window.innerHeight;
+    function resizeCanvas() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
     }
-    resize();
-    window.addEventListener('resize', resize);
 
     function Particle() {
-        this.reset = function() {
-            this.x  = Math.random() * W;
-            this.y  = Math.random() * H;
-            this.r  = Math.random() * 1.5 + 0.4;
-            this.vx = (Math.random() - 0.5) * 0.35;
-            this.vy = (Math.random() - 0.5) * 0.35;
-            this.alpha = Math.random() * 0.45 + 0.1;
-            const hue = Math.random() < 0.5 ? 250 : 170;
-            this.color = `hsla(${hue}, 80%, 70%, ${this.alpha})`;
+        this.reset = () => {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.radius = Math.random() * 1.8 + 0.6;
+            this.vx = (Math.random() - 0.5) * 0.22;
+            this.vy = (Math.random() - 0.5) * 0.22;
+            this.alpha = Math.random() * 0.34 + 0.12;
+            const hue = Math.random() < 0.55 ? 205 : 235;
+            this.color = `hsla(${hue}, 95%, 74%, ${this.alpha})`;
         };
         this.reset();
     }
 
-    for (let i = 0; i < 90; i++) particles.push(new Particle());
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    for (let i = 0; i < 80; i += 1) {
+        particles.push(new Particle());
+    }
 
     function drawParticles() {
-        ctx.clearRect(0, 0, W, H);
-        particles.forEach(p => {
-            p.x += p.vx; p.y += p.vy;
-            if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
-            if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-            ctx.fillStyle = p.color;
-            ctx.fill();
+        context.clearRect(0, 0, width, height);
+        particles.forEach((particle) => {
+            particle.x += particle.vx;
+            particle.y += particle.vy;
+
+            if (particle.x < 0) particle.x = width;
+            if (particle.x > width) particle.x = 0;
+            if (particle.y < 0) particle.y = height;
+            if (particle.y > height) particle.y = 0;
+
+            context.beginPath();
+            context.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+            context.fillStyle = particle.color;
+            context.fill();
         });
+
         requestAnimationFrame(drawParticles);
     }
+
     drawParticles();
     </script>
 </body>
