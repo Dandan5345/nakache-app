@@ -2,94 +2,15 @@
 <html lang="he" dir="rtl">
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>מדיניות פרטיות ואבטחה - TripEase</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-    <style>
-        .legal-page {
-            padding: 40px 0 60px;
-        }
-
-        .legal-content {
-            background: rgba(255, 255, 255, 0.86);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.6);
-            border-radius: 28px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-            padding: 40px;
-        }
-
-        .legal-content h1 {
-            margin-bottom: 12px;
-            font-size: 2.5rem;
-        }
-
-        .legal-content .subtitle {
-            color: var(--text-secondary);
-            margin-bottom: 32px;
-            font-size: 1.05rem;
-        }
-
-        .legal-part + .legal-part,
-        .legal-section + .legal-section {
-            margin-top: 32px;
-        }
-
-        .legal-part h2,
-        .legal-section h3 {
-            margin-bottom: 12px;
-        }
-
-        .legal-section p {
-            margin-bottom: 14px;
-        }
-
-        .legal-section ul {
-            margin: 0 0 14px;
-            padding-right: 22px;
-        }
-
-        .legal-section li {
-            margin-bottom: 8px;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-top: 12px;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact-box {
-            background: rgba(0, 113, 227, 0.06);
-            border: 1px solid rgba(0, 113, 227, 0.12);
-            border-radius: 18px;
-            padding: 20px 22px;
-            margin-top: 18px;
-        }
-
-        .contact-box p:last-child {
-            margin-bottom: 0;
-        }
-
-        @media (max-width: 768px) {
-            .legal-content {
-                padding: 24px 20px;
-                border-radius: 20px;
-            }
-
-            .legal-content h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
 </head>
 
-<body>
+<body class="legal-document-body">
     <div class="bg-blobs">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
@@ -105,6 +26,11 @@
 
     <main class="container legal-page">
         <article class="legal-content">
+        <div class="legal-nav">
+            <a href="privacy-tripease.html" class="legal-nav-btn active">מדיניות פרטיות</a>
+            <a href="terms-tripease.html" class="legal-nav-btn ">תנאי שימוש</a>
+            <a href="disclosure-tripease.html" class="legal-nav-btn ">גילוי נאות</a>
+        </div>
             <h1>מדיניות פרטיות ואבטחה</h1>
             <p class="subtitle">TripEase - אפליקציה לתכנון, ניהול ושיתוף טיולים</p>
 
