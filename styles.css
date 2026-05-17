@@ -194,7 +194,7 @@ body::before {
 }
 
 .hero-content {
-    transition: transform 0.14s linear, opacity 0.2s ease-out;
+    will-change: transform, opacity;
 }
 
 .hero-badge {

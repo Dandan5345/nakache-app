@@ -39,7 +39,7 @@
             </div>
             <h1><span class="text-gradient">nakache</span>.app</h1>
             <p id="typewriter"></p>
-            <div class="hero-scroll-indicator">
+            <div class="hero-scroll-indicator" id="hero-scroll-indicator">
                 <div class="scroll-line"></div>
                 <span>גלול למטה</span>
             </div>
@@ -166,7 +166,7 @@
 
     // ── Scroll-driven hero motion ──────────────────────────────
     const heroContent = document.getElementById('hero-content');
-    const scrollLine = document.querySelector('.hero-scroll-indicator');
+    const scrollLine = document.getElementById('hero-scroll-indicator');
     const HERO_SCROLL_SPEED = 0.22;
     const HERO_MAX_OFFSET = 140;
     const HERO_MIN_OPACITY = 0.25;
