@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy &amp; Security Policy – TripEase</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="legal-document-body">
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header class="hero" style="padding: 40px 0 20px;">
+        <div class="container text-center">
+            <h1>Trip<span>Ease</span></h1>
+            <p>Privacy &amp; Security Policy</p>
+            <a class="back-link" href="index.html">← Back to home</a>
+        </div>
+    </header>
+
+    <main class="container legal-page">
+        <article class="legal-content">
+            <div class="legal-nav">
+                <a href="privacy-tripease-en.html" class="legal-nav-btn active">Privacy Policy</a>
+                <a href="terms-tripease-en.html" class="legal-nav-btn">Terms of Use</a>
+                <a href="disclosure-tripease-en.html" class="legal-nav-btn">Disclosure</a>
+                <a href="privacy-tripease.html" class="legal-nav-btn" style="opacity:0.6;">עברית</a>
+            </div>
+            <h1>Privacy &amp; Security Policy</h1>
+            <p class="subtitle">TripEase – App for planning, managing &amp; sharing trips</p>
+
+            <section class="legal-section">
+                <h3>Introduction</h3>
+                <p>This document explains what data the app collects, where it is stored, which third parties are
+                    involved, and how the app protects your information. Using the app constitutes acceptance of this
+                    policy.</p>
+                <p>We take your privacy seriously. However, it is important to understand that no digital system is 100%
+                    secure. The app takes reasonable security measures but cannot guarantee absolute protection against
+                    breaches, malfunctions, human error, cyberattacks, third-party failures, or unauthorized access.</p>
+            </section>
+
+            <section class="legal-part">
+                <h2>Part A: Privacy Policy</h2>
+
+                <section class="legal-section">
+                    <h3>1. What Information Is Collected and Stored</h3>
+                    <p>The app stores information the user enters or creates in the app, including:</p>
+                    <p><strong>Profile Details</strong></p>
+                    <ul>
+                        <li>First name, last name, username, bio, profile avatar or emoji.</li>
+                        <li>Private or public account status.</li>
+                        <li>Followers and following.</li>
+                        <li>User identifiers (UID) for identification, content management, and security purposes.</li>
+                    </ul>
+                    <p><strong>Trip Details</strong></p>
+                    <ul>
+                        <li>Trip name, start and end dates.</li>
+                        <li>Destinations, addresses, and coordinates.</li>
+                        <li>Trip image and custom categories.</li>
+                        <li>Sharing permissions.</li>
+                    </ul>
+                    <p><strong>Logistics Details</strong></p>
+                    <ul>
+                        <li>Flights: flight number, airline, airports, dates and times, seat numbers, travel class,
+                            prices.</li>
+                        <li>Hotels: name, address, coordinates, stay dates, price, rating, meal plan.</li>
+                        <li>Car rental, trains, ferries, rides, and taxis – pickup and drop-off details, driver,
+                            company, price.</li>
+                        <li>Notes, booking links, booking confirmation numbers, payment status, and attached files.</li>
+                    </ul>
+                    <p><strong>Booking Confirmations</strong></p>
+                    <ul>
+                        <li>Place name, address, description, destination, date, time, price, payment status.</li>
+                        <li>Booking numbers and booking links stored in the device's secure storage.</li>
+                        <li>Files and images of booking confirmations.</li>
+                    </ul>
+                    <p><strong>Lists, Notes &amp; Documents</strong></p>
+                    <ul>
+                        <li>Checklists, list items, statuses, quantities, priorities, and person assignments.</li>
+                        <li>Notes – titles, free text, color, destination assignment, and reminders.</li>
+                        <li>Important documents – name, description, and attached files such as passport, license,
+                            insurance, and tickets.</li>
+                    </ul>
+                    <p><strong>Places to Visit</strong></p>
+                    <ul>
+                        <li>Place name, destination, type, address, coordinates, opening hours, website, rating, dietary
+                            info, food type, and images.</li>
+                        <li>Saved places and places you created.</li>
+                    </ul>
+                    <p><strong>Trip Itinerary</strong></p>
+                    <ul>
+                        <li>Itinerary days, itinerary items, times, addresses, coordinates, links, daily notes, place
+                            assignments, logistics items, and booking confirmations.</li>
+                    </ul>
+                    <p><strong>Weather Data</strong></p>
+                    <ul>
+                        <li>Weather forecast data is retrieved based on the trip destination's coordinates, not the
+                            user's real-time location, and is temporarily cached on the device.</li>
+                    </ul>
+                </section>
+
+                <section class="legal-section">
+                    <h3>2. Where Information Is Stored</h3>
+                    <p><strong>Locally on Device</strong></p>
+                    <p>A significant portion of the information is stored in the device's local storage, including
+                        SharedPreferences and other internal storage systems. This data is available offline and without
+                        sharing.</p>
+                    <p><strong>Secure Device Storage</strong></p>
+                    <p>Particularly sensitive information is stored in the device's secure storage (Flutter Secure
+                        Storage), which relies on Keychain on iPhone devices and Keystore or Secure Storage on Android
+                        devices.</p>
+                    <p>This storage holds, among other things:</p>
+                    <ul>
+                        <li>Booking numbers and booking links for booking confirmations.</li>
+                        <li>Encryption keys for locally encrypted files.</li>
+                    </ul>
+                    <p><strong>User's Personal Backup</strong></p>
+                    <p>If the user has enabled device backup, some data may be stored on iCloud or Google Drive,
+                        depending on the operating system and backup settings. If the option to back up private data is
+                        disabled, some private data will not be included in the backup according to the app's logic.</p>
+                    <p><strong>Cloud Servers</strong></p>
+                    <p>When a trip is shared or synchronized, or when features requiring cloud processing are used, some
+                        data is stored on cloud servers:</p>
+                    <ul>
+                        <li>Firebase Firestore – shared trip details, profiles, public places (TripInspo), templates
+                            (TripTap), followers, sharing invitations, metadata, and shared data.</li>
+                        <li>Cloudflare R2 – files, images, and booking confirmations uploaded as part of sharing or
+                            synchronization.</li>
+                        <li>ImgBB – image hosting service, may be used as a fallback storage for public images.</li>
+                    </ul>
+                </section>
+
+                <section class="legal-section">
+                    <h3>3. Trip Sharing – Basic Share &amp; Secure Share</h3>
+                    <p><strong>Basic Share</strong></p>
+                    <p>The trip is uploaded to cloud servers, but some private information is omitted or not uploaded.
+                        In particular, important documents, booking confirmation files, booking confirmation numbers,
+                        and private booking links are not intended to be shared in Basic Share mode. However, regular
+                        trip information including logistics details, notes, and general data may still be shared.</p>
+                    <p><strong>Secure Share</strong></p>
+                    <p>Information required for sharing is uploaded to cloud servers, with certain sensitive information
+                        encrypted before upload. Not every field the user may consider sensitive is necessarily
+                        encrypted. Certain sensitive information, as defined by the system, is encrypted in Secure Share
+                        mode.</p>
+                    <p>The Secure Share link includes an access key. Share it only with people you trust. The sharing
+                        link is valid for 10 minutes only from the moment of creation.</p>
+                    <p><strong>Participant Permissions</strong></p>
+                    <p>Participants invited to a trip may view, edit, add, or invite others, according to the
+                        permissions granted by the trip owner.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h3>4. Use of AI</h3>
+                    <p>The app uses two main AI providers for different features:</p>
+                    <p><strong>Google / Firebase AI / Gemini</strong></p>
+                    <p>Used to extract logistics details from texts, images, and files, and to create a full trip
+                        itinerary. Information sent includes trip details, destinations, dates, places, filtered
+                        logistics details, filtered booking confirmations, preferences, and free-text notes.</p>
+                    <p>Processing of information by Firebase AI or Google is subject to Google's privacy, security, and
+                        data retention policies and to the project settings.</p>
+                    <p><strong>OpenAI</strong></p>
+                    <p>Used to create a new trip via AI, and to create or edit a daily itinerary. Depending on our
+                        account or project settings with OpenAI, inputs and outputs sent to OpenAI may be shared with
+                        OpenAI for service improvement, quality evaluation, development, or model training purposes.</p>
+                    <p><strong>Information Not Sent to AI</strong></p>
+                    <ul>
+                        <li>Booking confirmation numbers and confirmation codes.</li>
+                        <li>Booking confirmation files and images.</li>
+                        <li>Private files and images from the logistics page and documents page.</li>
+                        <li>Private booking links.</li>
+                    </ul>
+                    <p><strong>Important User Recommendation</strong></p>
+                    <p>The app strongly recommends not entering unnecessary sensitive personal information into AI
+                        features, including:</p>
+                    <ul>
+                        <li>Passport numbers, ID numbers, driver's license numbers, or personal documents.</li>
+                        <li>Payment details, credit card, bank account, or passwords.</li>
+                        <li>Medical information.</li>
+                        <li>Other people's personal information without their authorization.</li>
+                        <li>Confidential or sensitive business information.</li>
+                    </ul>
+                    <p>Verify every AI output before saving or relying on it. AI outputs may be incorrect, incomplete,
+                        or misleading.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h3>5. Public Content – TripInspo</h3>
+                    <p>When a user publishes a place to TripInspo, the place details become public and available to
+                        other users.</p>
+                    <p>Public information may include:</p>
+                    <ul>
+                        <li>Place name, type, address, and coordinates.</li>
+                        <li>Descriptions, opening hours, website, whether reservation is required.</li>
+                        <li>Rating, dietary info, food type.</li>
+                        <li>Images and photographer credit.</li>
+                        <li>The publishing user's name and sharing date.</li>
+                        <li>The publisher's UID for content management, security, deletion, handling reports, and
+                            preventing misuse.</li>
+                    </ul>
+                    <p>Public images may be stored on external storage services such as Cloudflare R2 and ImgBB. Other
+                        users may attach a public place to their own trip, at which point a copy of the information is
+                        also stored with them. If a user deletes a public place, copies already attached to other users'
+                        private trips may not be automatically deleted.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h3>6. Location Data</h3>
+                    <p>The app uses coordinates of destinations, hotels, attractions, and places for displaying maps,
+                        calculating routes, proximity searches, and retrieving weather data. The coordinates are those
+                        of the destination or place and not necessarily the user's real-time location.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h3>7. Third Parties</h3>
+                    <p>The app uses the following third-party services. Use of these services is also subject to their
+                        own privacy policies:</p>
+                    <ul>
+                        <li>Firebase Auth – user authentication and identification.</li>
+                        <li>Firebase Firestore – cloud data storage.</li>
+                        <li>Cloudflare R2 – file and image storage.</li>
+                        <li>ImgBB – public image storage (fallback).</li>
+                        <li>OpenAI – AI service for creating trips and editing daily itineraries.</li>
+                        <li>Gemini / Firebase AI / Google – AI service for extracting logistics details and creating
+                            full itineraries.</li>
+                        <li>Google Maps / Apple Maps – maps, routes, and address search services.</li>
+                        <li>Meteo-Open – weather data service.</li>
+                        <li>Pixabay / Unsplash – external image services.</li>
+                        <li>Google Drive / iCloud – device backup services depending on user settings.</li>
+                        <li>Booking, GetYourGuide, and other tourism providers – if links to them are displayed.</li>
+                        <li>External sharing services – when the user sends a link via SMS, WhatsApp, email, or another
+                            app.</li>
+                        <li>Google Mobile Ads / AdMob – displaying ads, personalized advertising, performance
+                            measurement, fraud prevention, and rewarding ad views, if these features are enabled.</li>
+                        <li>Firebase Cloud Messaging / Apple Push Notification Service / Google Push Services – sending
+                            push notifications, system updates, AI updates, and reminders.</li>
+                    </ul>
+                </section>
+
+                <section class="legal-section">
+                    <h3>8. Advertising &amp; Ad Providers</h3>
+                    <p>The app may use external advertising providers to display ads, measure performance, prevent
+                        fraud, personalize ads, and improve the user experience.</p>
+                    <p>Ad providers may collect or receive certain technical information, such as the device's
+                        advertising identifier, device type, operating system, approximate IP address, language, general
+                        region, ad viewing or interaction data, in accordance with their policies and user settings.</p>
+                    <p>The app does not sell users' personal information to advertisers. However, external advertising
+                        providers may process information in accordance with their own privacy policies and applicable
+                        law.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h3>9. Push Notifications</h3>
+                    <p>To send push notifications, the app may use external notification services such as Firebase Cloud
+                        Messaging or the operating system services of Google and Apple.</p>
+                    <p>To send notifications, the app may store the device's notification identifier, such as an FCM
+                        Token or similar identifier, together with relevant user or trip details required to send the
+                        notification.</p>
+                    <p>Notifications may include information related to the trip, sharing, itinerary, AI requests,
+                        updates, or system messages. It is recommended that the user enable device screen lock, as
+                        notifications may appear on the lock screen depending on device settings.</p>
+                    <p>The user may cancel or restrict notifications through device settings or app settings, to the
+                        extent such an option exists.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h3>10. Who Sees the Information</h3>
+                    <ul>
+                        <li>The app does not sell the user's personal information.</li>
+                        <li>Internal access by app operators to data, if any, will only be for operation, security,
+                            support, troubleshooting, legal compliance, or protection against misuse.</li>
+                        <li>In a shared trip, authorized participants may see the information according to the
+                            permissions granted to them.</li>
+                        <li>On TripInspo, publicly published places are visible to app users.</li>
+                        <li>In the event of a breach or malfunction at third-party providers, such as Cloudflare, Apple,
+                            Firebase, Google, or backup services, the app's liability is limited in accordance with the
+                            terms of use and applicable law.</li>
+                    </ul>
+                </section>
+
+                <section class="legal-section">
+                    <h3>11. User Rights</h3>
+                    <p>The user may:</p>
+                    <ul>
+                        <li>Edit or delete their profile and the content they created.</li>
+                        <li>Set their account to private.</li>
+                        <li>Remove places they published to TripInspo, subject to copies held by other users.</li>
+                        <li>Delete trips, places, documents, booking confirmations, and itinerary items.</li>
+                        <li>Stop sharing a trip.</li>
+                    </ul>
+                    <p>Deleting data from the app will not necessarily delete copies already shared, backed up, or
+                        copied by other users or third parties.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h3>12. Retention of Private Data in the Cloud</h3>
+                    <p>Private data stored on Firestore or R2 as part of sharing or synchronization is intended to be
+                        stored in the cloud for a limited period in accordance with the app's deletion policy. Private
+                        cloud data may be automatically deleted after a certain period from the end of its use.</p>
+                </section>
+            </section>
+
+            <section class="legal-part">
+                <h2>Part B: Security Policy</h2>
+
+                <section class="legal-section">
+                    <h3>1. General Security Principles</h3>
+                    <ul>
+                        <li>The app takes reasonable security measures to protect user information.</li>
+                        <li>No digital system is 100% secure.</li>
+                        <li>Access to private trips is limited to the trip owner only.</li>
+                        <li>Access to shared trips is limited to the owners and authorized participants only.</li>
+                        <li>AI usage is rate-limited to prevent abuse.</li>
+                    </ul>
+                </section>
+
+                <section class="legal-section">
+                    <h3>2. Secure Storage on Device</h3>
+                    <p>Particularly sensitive information is stored in the operating system's secure storage (Flutter
+                        Secure Storage):</p>
+                    <ul>
+                        <li>Keychain on iOS devices.</li>
+                        <li>Keystore or Secure Storage on Android devices.</li>
+                    </ul>
+                    <p>This storage holds booking numbers, booking links, and encryption keys for local files.</p>
+                    <p>Files attached to important documents are stored locally in encrypted form using an internal file
+                        encryption service (SecureAttachmentService) in a dedicated app folder. Encryption keys are
+                        stored in the device's secure storage.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h3>3. Encryption in Secure Share</h3>
+                    <p>In Secure Share mode, certain sensitive information is encrypted before being stored on cloud
+                        servers:</p>
+                    <ul>
+                        <li>Encryption method: AES-256.</li>
+                        <li>A unique encryption key per trip (trip-per-key).</li>
+                        <li>Key size of 32 bytes encoded as Base64.</li>
+                        <li>A new random IV of 16 bytes is generated for each encryption operation.</li>
+                        <li>An encrypted field is stored as Base64 containing the IV together with the ciphertext.</li>
+                        <li>Files are encrypted on the same principle before being uploaded to file servers.</li>
+                    </ul>
+                    <p><strong>Sensitive Fields Encrypted in Secure Share Mode</strong></p>
+                    <p>In logistics details: notes, booking link, total price, payment status, amount paid, flight
+                        number, seat numbers, travel class, driver name, driver phone, hotel address, and hotel
+                        coordinates.</p>
+                    <p>In booking confirmations: additional details, price, and booking number.</p>
+                    <p>In lists and notes: title and content.</p>
+                    <p>In important documents: name and description.</p>
+                    <p>In files: attached files uploaded to cloud storage are encrypted before upload.</p>
+                    <p>Important: not every field the user may consider sensitive is necessarily encrypted. Certain
+                        sensitive information, as defined by the system, is encrypted in Secure Share mode.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h3>4. Secure Share Keys &amp; Links</h3>
+                    <ul>
+                        <li>The share key is stored in the URL fragment of the link (the part after the # sign), which
+                            is not sent to the server.</li>
+                        <li>Only the trip ID, nonce, and creation and expiry dates are stored on the server — not the
+                            key itself.</li>
+                        <li>A Secure Share link is valid for 10 minutes from the moment of creation.</li>
+                        <li>The user is responsible for keeping the sharing link safe and not forwarding it to
+                            unauthorized persons.</li>
+                    </ul>
+                </section>
+
+                <section class="legal-section">
+                    <h3>5. Access Control &amp; Permissions</h3>
+                    <ul>
+                        <li>Cloud server access rules (Firestore Rules) are configured so that a user can only access
+                            trips, places, documents, and items they have permission to access.</li>
+                        <li>Shared trips are managed according to view, edit, add, and invite permissions.</li>
+                        <li>Only the content owner or a system administrator may delete or update places published to
+                            TripInspo.</li>
+                        <li>Only the app administrator may create, edit, or delete TripTap templates.</li>
+                        <li>Changing account status to private also affects the display of public content.</li>
+                    </ul>
+                </section>
+
+                <section class="legal-section">
+                    <h3>6. Cloud File Security</h3>
+                    <ul>
+                        <li>Sensitive files on cloud storage servers (Cloudflare R2) are not publicly accessible without
+                            appropriate authorization.</li>
+                        <li>In Secure Share mode, files uploaded to the cloud are encrypted before upload.</li>
+                        <li>Deleting a document or booking confirmation should also delete the encrypted files attached
+                            to it.</li>
+                    </ul>
+                </section>
+
+                <section class="legal-section">
+                    <h3>7. AI Usage Limits</h3>
+                    <p>AI feature usage is limited by usage quotas to maintain security, service stability, and fair
+                        resource use. Example quotas, subject to change:</p>
+                    <ul>
+                        <li>Up to 5 requests per hour.</li>
+                        <li>Up to 10 requests per day.</li>
+                        <li>Up to 30 requests per week.</li>
+                    </ul>
+                    <p>The app operator may restrict, suspend, or block abnormal, automated, or terms-violating use of
+                        AI features.</p>
+                    <p>The app takes measures to protect against Prompt Injection and AI misuse, and filters certain
+                        sensitive information before sending to AI providers.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h3>8. Link Security</h3>
+                    <ul>
+                        <li>The app filters external links displayed on public pages to accept only http or https
+                            addresses.</li>
+                        <li>Navigation links and external links are opened only via valid addresses.</li>
+                    </ul>
+                </section>
+
+                <section class="legal-section">
+                    <h3>9. Content Reporting</h3>
+                    <p>Users may report incorrect, offensive, rights-infringing, spam, non-existent places,
+                        inappropriate images, or any other issue with public content. Reports are reviewed by the app
+                        team and may result in removal, editing, hiding, or blocking of content or accounts.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h3>10. Logs &amp; Technical Information</h3>
+                    <p>The app retains minimal logs for security purposes, preventing misuse, troubleshooting, and legal
+                        protection. We aim not to store unnecessary sensitive information in logs, crash reports, or
+                        Analytics data.</p>
+                    <p>In cases of suspected violation, misuse, offensive content, or illegal activity, the app may
+                        retain technical information, logs, user identifiers, content, and reports for review, security,
+                        legal protection, or sharing with authorities as required by law.</p>
+                </section>
+
+                <section class="legal-section">
+                    <h3>11. User Security Responsibility</h3>
+                    <p>The user is responsible for securing their device, account, passwords, backups, and sharing
+                        links. The app is not responsible for information exposure resulting from:</p>
+                    <ul>
+                        <li>Device theft or loss.</li>
+                        <li>Device hacking or leaving a device unlocked.</li>
+                        <li>Sharing passwords with others.</li>
+                        <li>Unauthorized access to a Google, Apple, or app account.</li>
+                        <li>Forwarding sharing links to unauthorized persons.</li>
+                        <li>Taking a screenshot and forwarding it to others.</li>
+                        <li>Using a public or unsecured device.</li>
+                    </ul>
+                </section>
+
+                <section class="legal-section">
+                    <h3>12. Policy Updates</h3>
+                    <p>The app operator may update the Privacy and Security Policy from time to time. Continued use of
+                        the app after a policy update will be considered acceptance of the updated policy, subject to
+                        applicable law.</p>
+                </section>
+            </section>
+
+            <section class="legal-section">
+                <h3>Summary</h3>
+                <p>The app stores information you enter for planning and managing your trips. Some information is stored
+                    locally on your device, some may be stored in your personal backup, and some may be stored on cloud
+                    servers when you share trips or use AI features. Particularly sensitive information is stored in the
+                    device's secure storage, and in Secure Share mode some information is encrypted using AES-256 before
+                    being stored in the cloud.</p>
+                <p>Responsibility for securing your device, account, and backup rests with you. The app takes reasonable
+                    security measures but cannot guarantee absolute security.</p>
+
+                <div class="contact-box">
+                    <h3>Contact Details</h3>
+                    <p>For questions, requests, reports, privacy, security, content, copyright, or any other matter
+                        related to the app, please contact the app operator at:</p>
+                    <p><strong>Name:</strong> Doron Nakache</p>
+                    <p><strong>Email:</strong> <a href="mailto:nakache.app@gmail.com">nakache.app@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:0584593847">0584593847</a></p>
+                    <p>Contact details may be updated from time to time in the app's documents or relevant app screens.
+                    </p>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>
