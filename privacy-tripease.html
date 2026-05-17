@@ -85,6 +85,65 @@
             .legal-content h1 {
                 font-size: 2rem;
             }
+
+            .legal-nav {
+                gap: 8px;
+            }
+
+            .legal-nav-btn {
+                padding: 8px 16px;
+                font-size: 0.82rem;
+            }
+        }
+
+        /* ── Legal Page Navigation ─────────────────────── */
+        .legal-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 32px;
+            padding-bottom: 26px;
+            border-bottom: 1px solid rgba(108, 99, 255, 0.12);
+        }
+
+        .legal-nav-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 22px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--text);
+            background: rgba(108, 99, 255, 0.07);
+            border: 1.5px solid rgba(108, 99, 255, 0.18);
+            transition: all 0.25s ease;
+            white-space: nowrap;
+        }
+
+        .legal-nav-btn:hover {
+            background: rgba(108, 99, 255, 0.13);
+            border-color: rgba(108, 99, 255, 0.38);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(108, 99, 255, 0.16);
+        }
+
+        .legal-nav-btn.active {
+            background: linear-gradient(135deg, #6c63ff, #00d4aa);
+            border-color: transparent;
+            color: #fff;
+            box-shadow: 0 6px 20px rgba(108, 99, 255, 0.30);
+            pointer-events: none;
+            cursor: default;
+        }
+
+        /* ── Section Header Accent ─────────────────────── */
+        .legal-section h2,
+        .legal-section h3,
+        .legal-part h2 {
+            border-right: 3px solid #6c63ff;
+            padding-right: 12px;
         }
     </style>
 </head>
@@ -105,6 +164,11 @@
 
     <main class="container legal-page">
         <article class="legal-content">
+            <nav class="legal-nav" aria-label="ניווט מסמכים משפטיים">
+                <a href="terms-tripease.html" class="legal-nav-btn">📋 תנאי שימוש</a>
+                <a href="privacy-tripease.html" class="legal-nav-btn active">🔒 מדיניות פרטיות ואבטחה</a>
+                <a href="disclosure-tripease.html" class="legal-nav-btn">📣 גילוי נאות</a>
+            </nav>
             <h1>מדיניות פרטיות ואבטחה</h1>
             <p class="subtitle">TripEase - אפליקציה לתכנון, ניהול ושיתוף טיולים</p>
 
