@@ -6,50 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nakache.app - האפליקציות שלי</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- רקע אנימציה -->
+    <!-- רקע -->
+    <canvas id="particle-canvas"></canvas>
     <div class="bg-blobs">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
     </div>
 
-    <!-- תפריט ניווט עליון -->
-    <nav class="navbar">
+    <!-- ניווט -->
+    <nav class="navbar" id="navbar">
         <div class="container navbar-content">
             <div class="logo">nakache<span>.app</span></div>
             <div class="nav-links">
                 <a href="#apps">אפליקציות</a>
-                <a href="mailto:doronenakache@example.com">צור קשר</a>
+                <a href="mailto:doronenakache@gmail.com">צור קשר</a>
             </div>
         </div>
     </nav>
 
+    <!-- Hero -->
     <header class="hero">
         <div class="container text-center">
-            <h1>nakache<span>.app</span></h1>
-            <p>היישומים המדויקים ביותר לחיים דיגיטליים חכמים יותר</p>
+            <div class="hero-badge">
+                <span class="dot"></span>
+                אפליקציות מובייל ישראליות
+            </div>
+            <h1><span class="text-gradient">nakache</span>.app</h1>
+            <p id="typewriter"></p>
+            <div class="hero-scroll-indicator">
+                <div class="scroll-line"></div>
+                <span>גלול למטה</span>
+            </div>
         </div>
     </header>
 
-    <main class="container" id="apps">
+    <!-- Stats -->
+    <div class="stats-row container">
+        <div class="stat-item">
+            <span class="stat-number" data-target="2">0</span>
+            <div class="stat-label">אפליקציות</div>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" data-target="1000">0</span>
+            <div class="stat-label">משתמשים</div>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" data-target="5">0</span>
+            <div class="stat-label">⭐ דירוג</div>
+        </div>
+    </div>
+
+    <!-- Apps -->
+    <main class="apps-section container" id="apps">
+        <div class="text-center">
+            <h2 class="section-title">האפליקציות שלי</h2>
+            <p class="section-subtitle">חוויות דיגיטליות חכמות שנבנו עם תשומת לב לכל פרט</p>
+        </div>
         <section class="apps-grid">
 
-            <!-- CashFlowM App Card -->
+            <!-- CashFlowM -->
             <div class="app-card">
                 <div class="app-image-container">
+                    <span class="app-badge">זמין עכשיו</span>
                     <img class="app-image" src="cashflowm.jpeg" alt="CashFlowM App">
                 </div>
                 <div class="app-content">
                     <h2>CashFlowM</h2>
-                    <p>האפליקציה המושלמת לניהול הוצאות והכנסות ומעקב אחרי שוק ההון. מאפשרת לעקוב אחרי חסכונות ולשתף
-                        מעקבי הוצאות וחסכונות בקלות עם חברים ומשפחה.</p>
+                    <p>האפליקציה המושלמת לניהול הוצאות והכנסות ומעקב אחרי שוק ההון. מאפשרת לעקוב אחרי חסכונות ולשתף מעקבי הוצאות וחסכונות בקלות עם חברים ומשפחה.</p>
+                    <div class="feature-tags">
+                        <span class="tag">💰 ניהול תקציב</span>
+                        <span class="tag">📈 שוק ההון</span>
+                        <span class="tag">👥 שיתוף</span>
+                    </div>
                     <div class="app-links">
                         <a href="https://apps.apple.com/il/app/cashflowm/id6760549070?l=he" target="_blank"
-                            class="btn primary-btn"><i class="fa-brands fa-apple"></i> הורד עכשיו</a>
+                            class="btn primary-btn">
+                            <i class="fa-brands fa-apple"></i> הורד עכשיו
+                        </a>
                         <div class="legal-links">
                             <a href="terms-cashflowm.html">תנאי שימוש</a> |
                             <a href="privacy-cashflowm.html">מדיניות פרטיות</a>
@@ -58,15 +97,20 @@
                 </div>
             </div>
 
-            <!-- TripEase App Card -->
+            <!-- TripEase -->
             <div class="app-card">
                 <div class="app-image-container tripease-bg">
+                    <span class="app-badge soon">בקרוב</span>
                     <img class="app-image" src="tripease.png" alt="TripEase App">
                 </div>
                 <div class="app-content">
                     <h2>TripEase</h2>
-                    <p>אפליקציה לניהול ויצירת טיולים – הכל במקום אחד. כל הטיסות, המלונות, הלו"ז היומי ואפילו דרכונים
-                        ואישורי הזמנות. מסודר ומוכן לשיתוף עם חברים או משפחה לטיול מושלם.</p>
+                    <p>אפליקציה לניהול ויצירת טיולים – הכל במקום אחד. כל הטיסות, המלונות, הלו"ז היומי ואפילו דרכונים ואישורי הזמנות. מסודר ומוכן לשיתוף עם חברים או משפחה לטיול מושלם.</p>
+                    <div class="feature-tags">
+                        <span class="tag">✈️ טיסות</span>
+                        <span class="tag">🏨 מלונות</span>
+                        <span class="tag">📅 לו"ז יומי</span>
+                    </div>
                     <div class="app-links">
                         <span class="btn secondary-btn disabled">בקרוב...</span>
                         <div class="legal-links">
@@ -82,11 +126,127 @@
     </main>
 
     <footer>
-        <div class="container text-center">
-            <p>&copy; 2026 Nakache.app - כל הזכויות שמורות.</p>
-            <p>פותח עם ❤️ על ידי דורון נקש</p>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">nakache<span>.app</span></div>
+                <div class="footer-links">
+                    <a href="#apps">אפליקציות</a>
+                    <a href="mailto:doronenakache@gmail.com">צור קשר</a>
+                </div>
+                <p class="footer-copy">&copy; 2026 Nakache.app · כל הזכויות שמורות · פותח עם <span class="footer-heart">♥</span> על ידי דורון נקש</p>
+            </div>
         </div>
     </footer>
+
+    <script>
+    // ── Navbar scroll ──────────────────────────────────────────
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // ── Typewriter ─────────────────────────────────────────────
+    const phrases = [
+        'היישומים המדויקים ביותר לחיים דיגיטליים חכמים יותר',
+        'מנהל את הכסף שלך. מתכנן את הטיול שלך.',
+        'אפליקציות שנבנו עם אהבה לפרטים.',
+    ];
+    const tw = document.getElementById('typewriter');
+    let pi = 0, ci = 0, deleting = false;
+    function typeLoop() {
+        const phrase = phrases[pi];
+        if (!deleting) {
+            tw.textContent = phrase.slice(0, ++ci);
+            if (ci === phrase.length) { deleting = true; setTimeout(typeLoop, 2200); return; }
+        } else {
+            tw.textContent = phrase.slice(0, --ci);
+            if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; }
+        }
+        setTimeout(typeLoop, deleting ? 35 : 60);
+    }
+    typeLoop();
+
+    // ── Scroll reveal cards ────────────────────────────────────
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.app-card').forEach(c => observer.observe(c));
+
+    // ── Animated stat counters ─────────────────────────────────
+    const statObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (!e.isIntersecting) return;
+            const el = e.target;
+            const target = +el.dataset.target;
+            const duration = 1400;
+            const step = Math.ceil(target / (duration / 16));
+            let current = 0;
+            const timer = setInterval(() => {
+                current = Math.min(current + step, target);
+                el.textContent = current.toLocaleString('he-IL');
+                if (current >= target) clearInterval(timer);
+            }, 16);
+            statObs.unobserve(el);
+        });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.stat-number').forEach(el => statObs.observe(el));
+
+    // ── 3-D tilt on cards ─────────────────────────────────────
+    document.querySelectorAll('.app-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const r = card.getBoundingClientRect();
+            const x = (e.clientX - r.left) / r.width  - 0.5;
+            const y = (e.clientY - r.top)  / r.height - 0.5;
+            card.style.transform = `translateY(-10px) perspective(900px) rotateY(${x * 6}deg) rotateX(${-y * 5}deg)`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+
+    // ── Particle canvas ────────────────────────────────────────
+    const canvas = document.getElementById('particle-canvas');
+    const ctx = canvas.getContext('2d');
+    let W, H, particles = [];
+
+    function resize() {
+        W = canvas.width  = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    function Particle() {
+        this.reset = function() {
+            this.x  = Math.random() * W;
+            this.y  = Math.random() * H;
+            this.r  = Math.random() * 1.5 + 0.4;
+            this.vx = (Math.random() - 0.5) * 0.35;
+            this.vy = (Math.random() - 0.5) * 0.35;
+            this.alpha = Math.random() * 0.45 + 0.1;
+            const hue = Math.random() < 0.5 ? 250 : 170;
+            this.color = `hsla(${hue}, 80%, 70%, ${this.alpha})`;
+        };
+        this.reset();
+    }
+
+    for (let i = 0; i < 90; i++) particles.push(new Particle());
+
+    function drawParticles() {
+        ctx.clearRect(0, 0, W, H);
+        particles.forEach(p => {
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+            if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = p.color;
+            ctx.fill();
+        });
+        requestAnimationFrame(drawParticles);
+    }
+    drawParticles();
+    </script>
 </body>
 
 </html>
