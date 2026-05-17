@@ -11,19 +11,31 @@
 </head>
 
 <body>
+    <!-- רקע אנימציה -->
     <div class="bg-blobs">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
     </div>
 
+    <!-- תפריט ניווט עליון -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <div class="logo">nakache<span>.app</span></div>
+            <div class="nav-links">
+                <a href="#apps">אפליקציות</a>
+                <a href="mailto:doronenakache@example.com">צור קשר</a>
+            </div>
+        </div>
+    </nav>
+
     <header class="hero">
         <div class="container text-center">
             <h1>nakache<span>.app</span></h1>
-            <p>הבית לאפליקציות המדויקות ביותר ליום-יום שלך</p>
+            <p>היישומים המדויקים ביותר לחיים דיגיטליים חכמים יותר</p>
         </div>
     </header>
 
-    <main class="container">
+    <main class="container" id="apps">
         <section class="apps-grid">
 
             <!-- CashFlowM App Card -->
@@ -49,7 +61,7 @@
             <!-- TripEase App Card -->
             <div class="app-card">
                 <div class="app-image-container tripease-bg">
-                    <i class="fa-solid fa-plane-departure"></i>
+                    <img class="app-image" src="tripease.png" alt="TripEase App">
                 </div>
                 <div class="app-content">
                     <h2>TripEase</h2>
