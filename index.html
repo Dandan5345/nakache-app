@@ -1,109 +1,421 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nakache.app - האפליקציות שלי</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nakache.app — אפליקציות שמרגישות חיות</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
+<body dir="rtl">
 
-<body>
-    <!-- רקע אנימציה -->
-    <div class="bg-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
+  <!-- Animated mesh background -->
+  <div class="aurora" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="blob b4"></div>
+    <div class="blob b5"></div>
+  </div>
+  <svg class="aurora-grain" aria-hidden="true">
+    <filter id="grain"><feTurbulence baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter>
+    <rect width="100%" height="100%" filter="url(#grain)" opacity="0.18"/>
+  </svg>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-pill">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div class="brand-name">nakache.app</div>
+      </div>
+      <div class="nav-spacer"></div>
+      <div class="lang-toggle" data-lang="he" role="tablist" aria-label="Language">
+        <div class="thumb"></div>
+        <button data-lang-btn="en">EN</button>
+        <button data-lang-btn="he" class="active">עב</button>
+      </div>
     </div>
+  </nav>
 
-    <!-- תפריט ניווט עליון -->
-    <nav class="navbar">
-        <div class="container navbar-content">
-            <div class="logo">nakache<span>.app</span></div>
-            <div class="nav-links">
-                <a href="#apps">אפליקציות</a>
-                <a href="mailto:doronenakache@example.com">צור קשר</a>
-            </div>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">
+            <span class="pulse-dot"></span>
+            <span data-i18n="eyebrow">חוויית מוצר בהירה, חלקה ומודרנית</span>
+          </div>
+          <h1 class="hero-title">
+            <span data-i18n="heroTitle">אפליקציות שמרגישות</span>
+            <span class="accent" data-i18n="heroTitleAccent">חיות</span>
+          </h1>
+          <p class="hero-sub" data-i18n="heroSub">ממשק בהיר עם שכבות עדינות, כרטיסים נקיים ותנועה רכה — אוסף אישי של מוצרים שאני בונה בשפה אחת.</p>
+          <div class="cta-row">
+            <a href="#apps" class="btn primary">
+              <span data-i18n="ctaPrimary">גלה את האפליקציות</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
         </div>
-    </nav>
 
-    <header class="hero">
-        <div class="container text-center">
-            <h1>nakache<span>.app</span></h1>
-            <p>היישומים המדויקים ביותר לחיים דיגיטליים חכמים יותר</p>
+        <div class="phone-stack" data-parallax-root>
+          <a class="phone-link p1" href="#cashflowm" aria-label="CashFlowM" data-parallax="0.4">
+            <span class="phone-label phone-label-cf">CashFlowM</span>
+            <div class="phone">
+              <div class="phone-screen">
+                <div class="phone-notch"></div>
+                <img src="cashflowm.jpeg" alt="CashFlowM">
+              </div>
+              <div class="phone-glow"></div>
+              <div class="chip chip-cf chip-pos-1"><span class="emoji">💰</span><span data-i18n="chip.cf1">ניהול תקציב חכם</span></div>
+              <div class="chip chip-cf chip-pos-2"><span class="emoji">📈</span><span data-i18n="chip.cf2">מעקב שוק ההון</span></div>
+              <div class="chip chip-cf chip-pos-3"><span class="emoji">🤝</span><span data-i18n="chip.cf3">שיתוף משפחתי</span></div>
+            </div>
+          </a>
+          <a class="phone-link p2" href="#tripease" aria-label="TripEase" data-parallax="-0.6">
+            <span class="phone-label phone-label-te">TripEase</span>
+            <div class="phone">
+              <div class="phone-screen">
+                <div class="phone-notch"></div>
+                <img src="tripease.png" alt="TripEase">
+              </div>
+              <div class="phone-glow"></div>
+              <div class="chip chip-te chip-pos-1"><span class="emoji">🌍</span><span data-i18n="chip.te1">הכל במקום אחד</span></div>
+              <div class="chip chip-te chip-pos-2"><span class="emoji">👥</span><span data-i18n="chip.te2">שיתוף עם חברים</span></div>
+              <div class="chip chip-te chip-pos-3"><span class="emoji">✈️</span><span data-i18n="chip.te3">טיסות, מלונות ומסמכים</span></div>
+            </div>
+          </a>
         </div>
-    </header>
+      </div>
+    </div>
+  </header>
 
-    <main class="container" id="apps">
-        <section class="apps-grid">
-
-            <!-- CashFlowM App Card -->
-            <div class="app-card">
-                <div class="app-badge"><i class="fa-solid fa-chart-line"></i> פיננסים</div>
-                <div class="app-image-container">
-                    <img class="app-image" src="cashflowm.jpeg" alt="CashFlowM App">
-                </div>
-                <div class="app-content">
-                    <h2>CashFlowM</h2>
-                    <p>האפליקציה המושלמת לניהול הוצאות והכנסות ומעקב אחרי שוק ההון. מאפשרת לעקוב אחרי חסכונות ולשתף
-                        מעקבי הוצאות וחסכונות בקלות עם חברים ומשפחה.</p>
-                    <div class="app-links">
-                        <a href="https://apps.apple.com/il/app/cashflowm/id6760549070?l=he" target="_blank"
-                            class="btn primary-btn"><i class="fa-brands fa-apple"></i> הורד עכשיו</a>
-                        <div class="legal-links">
-                            <a href="terms-cashflowm.html">תנאי שימוש</a> |
-                            <a href="privacy-cashflowm.html">מדיניות פרטיות</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TripEase App Card -->
-            <div class="app-card">
-                <div class="app-badge"><i class="fa-solid fa-plane"></i> תיירות</div>
-                <div class="app-image-container tripease-bg">
-                    <img class="app-image" src="tripease.png" alt="TripEase App">
-                </div>
-                <div class="app-content">
-                    <h2>TripEase</h2>
-                    <p>אפליקציה לניהול ויצירת טיולים – הכל במקום אחד. כל הטיסות, המלונות, הלו"ז היומי ואפילו דרכונים
-                        ואישורי הזמנות. מסודר ומוכן לשיתוף עם חברים או משפחה לטיול מושלם.</p>
-                    <div class="app-links">
-                        <span class="btn secondary-btn disabled">בקרוב...</span>
-                        <div class="legal-links">
-                            <a href="terms-tripease.html">תנאי שימוש</a> |
-                            <a href="privacy-tripease.html">מדיניות פרטיות</a> |
-                            <a href="disclosure-tripease.html">גילוי נאות</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-    </main>
-
-        <footer class="modern-footer">
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <div class="logo">nakache<span>.app</span></div>
-                <p>פיתוח יישומים מדויקים לחיים דיגיטליים חכמים יותר.</p>
-            </div>
-            <div class="footer-links">
-                <h3>צור קשר</h3>
-                <a href="mailto:doronenakache@example.com"><i class="fa-solid fa-envelope"></i> doronenakache@example.com</a>
-                                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/dorone-nakache-7566443bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/nakache_app?igsh=NjYzMWd6a21tbWdm&utm_source=qr" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@nakache_app?_r=1&_t=ZS-96RQYcjZCUe" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="https://wa.me/972500000000" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                </div>
-            </div>
+  <!-- Pillars -->
+  <section class="pillars">
+    <div class="container">
+      <div class="pillars-row">
+        <div class="pillar reveal">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.39 4.84L20 8l-4 3.9.94 5.5L12 14.77l-4.94 2.63L8 11.9 4 8l5.61-1.16L12 2z"/></svg>
+          </div>
+          <h3 class="pillar-title" data-i18n="pillar1.t">עיצוב נקי</h3>
+          <p class="pillar-desc" data-i18n="pillar1.d">היררכיה ברורה, טיפוגרפיה רכה, וצבעוניות שמשרתת את התוכן.</p>
         </div>
-        <div class="footer-bottom text-center">
-            <p>&copy; 2026 Nakache.app - כל הזכויות שמורות. פותח עם ❤️ על ידי דורון נקש.</p>
+        <div class="pillar reveal">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 4 14 11 14 10 22 20 10 13 10 13 2"/></svg>
+          </div>
+          <h3 class="pillar-title" data-i18n="pillar2.t">תנועה חיה</h3>
+          <p class="pillar-desc" data-i18n="pillar2.d">מעברים חלקים, פרלקס, וזיקוקי זכוכית שהופכים כל אינטראקציה לטבעית.</p>
         </div>
-    </footer>
+        <div class="pillar reveal">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          </div>
+          <h3 class="pillar-title" data-i18n="pillar3.t">פרטיות תחילה</h3>
+          <p class="pillar-desc" data-i18n="pillar3.d">המידע שלך נשאר שלך. מינימום הרשאות, מקסימום שקיפות.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <main class="products" id="apps">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow" data-i18n="productsEyebrow">אפליקציות בעיצוב חדש</div>
+        <h2 class="section-title" data-i18n="productsTitle">המוצרים שלי</h2>
+        <p class="section-sub" data-i18n="productsSub">כל אפליקציה נבנית מאותו ה־DNA: עומק עדין, היררכיה ברורה, ותנועה שמרגישה טבעית.</p>
+      </div>
+
+      <div class="product-list">
+
+        <!-- CashFlowM -->
+        <article class="product reveal" id="cashflowm">
+          <div class="product-glow" style="background:radial-gradient(closest-side, rgba(61,123,255,0.4), transparent 70%);"></div>
+          <div class="product-info">
+            <div class="status-pill live"><span class="dot"></span><span data-i18n="statusLive">זמין עכשיו</span></div>
+            <h3 class="product-name">CashFlowM</h3>
+            <div class="product-tag" style="color: var(--blue);" data-i18n="cf.tag">תקציב, השקעות, שליטה.</div>
+            <p class="product-desc" data-i18n="cf.desc">ניהול הוצאות והכנסות ומעקב אחרי שוק ההון, עם חוויה נקייה שמבליטה את המידע החשוב באמת.</p>
+            <ul class="bullets">
+              <li><span class="b-emoji" style="background: rgba(61,123,255,0.15);">💰</span><span data-i18n="cf.b1">ניהול תקציב חכם</span></li>
+              <li><span class="b-emoji" style="background: rgba(61,123,255,0.15);">📈</span><span data-i18n="cf.b2">מעקב שוק ההון</span></li>
+              <li><span class="b-emoji" style="background: rgba(61,123,255,0.15);">🤝</span><span data-i18n="cf.b3">שיתוף משפחתי</span></li>
+            </ul>
+            <div class="product-actions">
+              <a href="https://apps.apple.com/il/app/cashflowm/id6760549070?l=he" target="_blank"
+                 class="btn primary"
+                 style="background: linear-gradient(135deg, #3D7BFF, #7AA8FF); box-shadow: 0 14px 30px rgba(61,123,255,0.45);">
+                <i class="fa-brands fa-apple"></i>
+                <span data-i18n="download">הורד עכשיו</span>
+                <span class="arrow">↗</span>
+              </a>
+              <div class="legal-mini">
+                <a href="terms-cashflowm.html" data-i18n="terms">תנאי שימוש</a>
+                <span class="dotsep">·</span>
+                <a href="privacy-cashflowm.html" data-i18n="privacy">מדיניות פרטיות</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-media">
+            <div class="phone product-phone">
+              <div class="phone-screen">
+                <div class="phone-notch"></div>
+                <img src="cashflowm.jpeg" alt="CashFlowM">
+              </div>
+              <div class="phone-glow" style="background: radial-gradient(closest-side, rgba(61,123,255,0.4), transparent 70%);"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- TripEase -->
+        <article class="product reverse reveal" id="tripease">
+          <div class="product-glow" style="background:radial-gradient(closest-side, rgba(91,191,174,0.4), transparent 70%);"></div>
+          <div class="product-info">
+            <div class="status-pill soon"><span class="dot"></span><span data-i18n="statusSoon">בקרוב</span></div>
+            <h3 class="product-name">TripEase</h3>
+            <div class="product-tag" style="color: var(--teal);" data-i18n="te.tag">הטיול שלך, בעמוד אחד.</div>
+            <p class="product-desc" data-i18n="te.desc">מרכז טיולים חכם, נעים ומודרני לניהול טיסות, מלונות, מסמכים, לו"ז יומי ושיתופים — הכל במקום אחד.</p>
+            <ul class="bullets">
+              <li><span class="b-emoji" style="background: rgba(91,191,174,0.18);">✈️</span><span data-i18n="te.b1">טיסות ומסמכים</span></li>
+              <li><span class="b-emoji" style="background: rgba(91,191,174,0.18);">🏨</span><span data-i18n="te.b2">מלונות ולינות</span></li>
+              <li><span class="b-emoji" style="background: rgba(91,191,174,0.18);">📅</span><span data-i18n="te.b3">לו"ז יומי משותף</span></li>
+            </ul>
+            <div class="product-actions">
+              <button class="btn primary"
+                      style="background: linear-gradient(135deg, #5BBFAE, #9BD8CD); box-shadow: 0 14px 30px rgba(91,191,174,0.5);"
+                      data-i18n="notify">הודיעו לי כשמשיק</button>
+              <div class="legal-mini">
+                <a href="terms-tripease.html" data-i18n="terms">תנאי שימוש</a>
+                <span class="dotsep">·</span>
+                <a href="privacy-tripease.html" data-i18n="privacy">מדיניות פרטיות</a>
+                <span class="dotsep">·</span>
+                <a href="disclosure-tripease.html" data-i18n="disclosure">גילוי נאות</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-media">
+            <div class="phone product-phone">
+              <div class="phone-screen">
+                <div class="phone-notch"></div>
+                <img src="tripease.png" alt="TripEase">
+              </div>
+              <div class="phone-glow" style="background: radial-gradient(closest-side, rgba(91,191,174,0.4), transparent 70%);"></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Legal -->
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <div class="contact-glow-1"></div>
+        <div class="contact-glow-2"></div>
+        <div class="contact-inner">
+          <div>
+            <div class="contact-eyebrow" data-i18n="contactEyebrow">בואו נדבר</div>
+            <h2 class="contact-title" data-i18n="contactTitle">יש לך רעיון? שאלה?</h2>
+          </div>
+          <div>
+            <a href="mailto:doronenakache@gmail.com" class="contact-cta">
+              <i class="fa-solid fa-envelope"></i>
+              <span data-i18n="contactCTA">שלחו מייל</span>
+            </a>
+            <div class="contact-mail">doronenakache@gmail.com</div>
+            <div class="socials">
+              <a href="https://www.linkedin.com/in/dorone-nakache-7566443bb" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/nakache_app" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.tiktok.com/@nakache_app" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="https://wa.me/972500000000" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <div class="brand-mini">
+            <div class="brand-mark"></div>
+            <span>nakache.app</span>
+          </div>
+          <p class="footer-tag" data-i18n="footer.tag">אוסף אישי של אפליקציות שנבנות בשפה אחת — נקייה, חיה ומדויקת.</p>
+          <div class="socials footer-socials">
+            <a href="https://www.linkedin.com/in/dorone-nakache-7566443bb" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/nakache_app" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@nakache_app" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="mailto:doronenakache@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title" data-i18n="footer.apps">אפליקציות</h4>
+          <ul class="footer-links">
+            <li><a href="#cashflowm">CashFlowM</a></li>
+            <li><a href="#tripease">TripEase</a></li>
+            <li><a href="https://apps.apple.com/il/app/cashflowm/id6760549070?l=he" target="_blank" data-i18n="footer.downloadCf">הורד CashFlowM</a></li>
+            <li><a href="https://apps.apple.com/il/app/tripease/id6753003687" target="_blank" data-i18n="footer.downloadTe">הורד TripEase</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title" data-i18n="footer.legalCf">CashFlowM · משפטי</h4>
+          <ul class="footer-links">
+            <li><a href="terms-cashflowm.html" data-i18n="terms">תנאי שימוש</a></li>
+            <li><a href="privacy-cashflowm.html" data-i18n="privacy">מדיניות פרטיות</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title" data-i18n="footer.legalTe">TripEase · משפטי</h4>
+          <ul class="footer-links">
+            <li><a href="terms-tripease.html" data-i18n="terms">תנאי שימוש</a></li>
+            <li><a href="privacy-tripease.html" data-i18n="privacy">מדיניות פרטיות</a></li>
+            <li><a href="disclosure-tripease.html" data-i18n="disclosure">גילוי נאות</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div data-i18n="footer">© 2026 Nakache.app · כל הזכויות שמורות · פותח עם ♥ על ידי דורון נקש</div>
+        <a href="mailto:doronenakache@gmail.com" class="footer-mail">doronenakache@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ===== Translations =====
+    const COPY = {
+      he: {
+        dir: 'rtl',
+        'nav.apps': 'אפליקציות', 'nav.legal': 'מסמכים משפטיים', 'nav.contact': 'צור קשר',
+        eyebrow: 'חוויית מוצר בהירה, חלקה ומודרנית',
+        heroTitle: 'אפליקציות שמרגישות',
+        heroTitleAccent: 'חיות',
+        heroSub: 'ממשק בהיר עם שכבות עדינות, כרטיסים נקיים ותנועה רכה — אוסף אישי של מוצרים שאני בונה בשפה אחת.',
+        ctaPrimary: 'גלה את האפליקציות',
+        ctaSecondary: 'למסמכים משפטיים',
+        'pillar1.t': 'עיצוב נקי', 'pillar1.d': 'היררכיה ברורה, טיפוגרפיה רכה, וצבעוניות שמשרתת את התוכן.',
+        'pillar2.t': 'תנועה חיה', 'pillar2.d': 'מעברים חלקים, פרלקס, וזיקוקי זכוכית שהופכים כל אינטראקציה לטבעית.',
+        'pillar3.t': 'פרטיות תחילה', 'pillar3.d': 'המידע שלך נשאר שלך. מינימום הרשאות, מקסימום שקיפות.',
+        productsEyebrow: 'אפליקציות בעיצוב חדש',
+        productsTitle: 'המוצרים שלי',
+        productsSub: 'כל אפליקציה נבנית מאותו ה־DNA: עומק עדין, היררכיה ברורה, ותנועה שמרגישה טבעית.',
+        statusLive: 'זמין עכשיו', statusSoon: 'בקרוב',
+        download: 'הורד עכשיו', notify: 'הודיעו לי כשמשיק',
+        terms: 'תנאי שימוש', privacy: 'מדיניות פרטיות', disclosure: 'גילוי נאות',
+        legalTitle: 'מסמכים משפטיים', legalSub: 'הכל שקוף, נגיש ונעים לקריאה.',
+        contactEyebrow: 'בואו נדבר', contactTitle: 'יש לך רעיון? שאלה?', contactCTA: 'שלחו מייל',
+        footer: '© 2026 Nakache.app · כל הזכויות שמורות · פותח עם ♥ על ידי דורון נקש',
+        'footer.tag': 'אוסף אישי של אפליקציות שנבנות בשפה אחת — נקייה, חיה ומדויקת.',
+        'footer.apps': 'אפליקציות', 'footer.legalCf': 'CashFlowM · משפטי', 'footer.legalTe': 'TripEase · משפטי',
+        'footer.downloadCf': 'הורד CashFlowM', 'footer.downloadTe': 'הורד TripEase',
+        'cf.tag': 'תקציב, השקעות, שליטה.',
+        'cf.desc': 'ניהול הוצאות והכנסות ומעקב אחרי שוק ההון, עם חוויה נקייה שמבליטה את המידע החשוב באמת.',
+        'cf.b1': 'ניהול תקציב חכם', 'cf.b2': 'מעקב שוק ההון', 'cf.b3': 'שיתוף משפחתי',
+        'te.tag': 'הטיול שלך, בעמוד אחד.',
+        'te.desc': 'מרכז טיולים חכם, נעים ומודרני לניהול טיסות, מלונות, מסמכים, לו"ז יומי ושיתופים — הכל במקום אחד.',
+        'te.b1': 'טיסות ומסמכים', 'te.b2': 'מלונות ולינות', 'te.b3': 'לו"ז יומי משותף',
+        'chip.cf1': 'ניהול תקציב חכם', 'chip.cf2': 'מעקב שוק ההון', 'chip.cf3': 'שיתוף משפחתי',
+        'chip.te1': 'הכל במקום אחד', 'chip.te2': 'שיתוף עם חברים', 'chip.te3': 'טיסות, מלונות ומסמכים',
+      },
+      en: {
+        dir: 'ltr',
+        'nav.apps': 'Apps', 'nav.legal': 'Legal', 'nav.contact': 'Contact',
+        eyebrow: 'A clear, smooth, modern product experience',
+        heroTitle: 'Apps that feel',
+        heroTitleAccent: 'alive',
+        heroSub: 'A bright interface with delicate layers, clean cards and soft motion — a personal collection of products I build in one shared language.',
+        ctaPrimary: 'Explore the apps',
+        ctaSecondary: 'Read the legal docs',
+        'pillar1.t': 'Clean design', 'pillar1.d': 'Clear hierarchy, soft typography, color that serves the content.',
+        'pillar2.t': 'Living motion', 'pillar2.d': 'Smooth transitions, parallax, and glass sparkles that make every interaction feel natural.',
+        'pillar3.t': 'Privacy first', 'pillar3.d': 'Your data stays yours. Minimum permissions, maximum transparency.',
+        productsEyebrow: 'Apps, redesigned',
+        productsTitle: 'My products',
+        productsSub: 'Every app is built from the same DNA: gentle depth, clear hierarchy, motion that feels natural.',
+        statusLive: 'Available now', statusSoon: 'Coming soon',
+        download: 'Download now', notify: 'Notify me at launch',
+        terms: 'Terms', privacy: 'Privacy', disclosure: 'Disclosure',
+        legalTitle: 'Legal documents', legalSub: 'Transparent, accessible, pleasant to read.',
+        contactEyebrow: "Let's talk", contactTitle: 'Got an idea? A question?', contactCTA: 'Send an email',
+        footer: '© 2026 Nakache.app · All rights reserved · Made with ♥ by Doron Nakache',
+        'footer.tag': 'A personal collection of apps built in one shared language — clean, alive, precise.',
+        'footer.apps': 'Apps', 'footer.legalCf': 'CashFlowM · Legal', 'footer.legalTe': 'TripEase · Legal',
+        'footer.downloadCf': 'Download CashFlowM', 'footer.downloadTe': 'Download TripEase',
+        'cf.tag': 'Budget, invest, in control.',
+        'cf.desc': 'Manage expenses, income and follow the stock market with a clean experience that highlights what actually matters.',
+        'cf.b1': 'Smart budgeting', 'cf.b2': 'Stock-market tracking', 'cf.b3': 'Family sharing',
+        'te.tag': 'Your trip, on one page.',
+        'te.desc': 'A calm, modern trip hub for flights, hotels, documents, daily itinerary and sharing — all in one place.',
+        'te.b1': 'Flights & documents', 'te.b2': 'Hotels & stays', 'te.b3': 'Shared itinerary',
+        'chip.cf1': 'Smart budgeting', 'chip.cf2': 'Stock tracking', 'chip.cf3': 'Family sharing',
+        'chip.te1': 'All in one place', 'chip.te2': 'Share with friends', 'chip.te3': 'Flights, hotels & docs',
+      },
+    };
+
+    const applyLang = (lang) => {
+      const t = COPY[lang]; if (!t) return;
+      document.documentElement.lang = lang;
+      document.documentElement.dir = t.dir;
+      document.body.dir = t.dir;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] != null) el.textContent = t[key];
+      });
+      const tog = document.querySelector('.lang-toggle');
+      tog.setAttribute('data-lang', lang);
+      tog.querySelectorAll('button').forEach(b => {
+        b.classList.toggle('active', b.dataset.langBtn === lang);
+      });
+      try { localStorage.setItem('lang', lang); } catch(e) {}
+    };
+
+    document.querySelectorAll('.lang-toggle button').forEach(btn => {
+      btn.addEventListener('click', () => applyLang(btn.dataset.langBtn));
+    });
+
+    const savedLang = (() => { try { return localStorage.getItem('lang'); } catch(e) { return null; } })();
+    if (savedLang && COPY[savedLang]) applyLang(savedLang);
+
+    // ===== Mouse parallax for phones + blob drift =====
+    const phoneStack = document.querySelector('[data-parallax-root]');
+    const blobs = document.querySelectorAll('.aurora .blob');
+    const onMove = (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5);
+      const y = (e.clientY / window.innerHeight - 0.5);
+      if (phoneStack) {
+        phoneStack.querySelectorAll('[data-parallax]').forEach(el => {
+          const s = parseFloat(el.dataset.parallax);
+          el.style.translate = `${x * 30 * s}px ${y * 30 * s}px`;
+        });
+      }
+      blobs.forEach((b, i) => {
+        const s = (i % 2 === 0 ? 0.6 : -0.5);
+        b.style.transform = `translate(-50%, -50%) translate(${x * 80 * s}px, ${y * 80 * s}px)`;
+      });
+    };
+    if (window.matchMedia('(hover: hover)').matches) {
+      window.addEventListener('mousemove', onMove, { passive: true });
+    }
+
+    // ===== Reveal on scroll =====
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal, .product').forEach(el => io.observe(el));
+
+  </script>
 </body>
-
 </html>
